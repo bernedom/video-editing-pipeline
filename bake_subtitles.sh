@@ -11,7 +11,7 @@ EndOfMessage
 )
 
 
-if [ $# -lt 3 ];then
+if [ $# -lt 2 ];then
     echo "Insufficient arguments:"
     echo "${HELP}"
     exit 1
@@ -22,4 +22,4 @@ SUBTITLE_FILE=$2
 INPUT_EXTENSIONLESS=${INPUT_FILE%.*$}
 EXTENSION="${INPUT_FILE##*.}"
 
-echo "ffmpeg -i ${INPUT_FILE} -vf "ass=${SUBTITLE_FILE}" ${INPUT_EXTENSIONLESS}_subtitles.${EXTENSION}"
+ffmpeg -i ${INPUT_FILE} -vf "ass=${SUBTITLE_FILE}" ${INPUT_EXTENSIONLESS}_subtitles.${EXTENSION}

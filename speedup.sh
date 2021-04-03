@@ -10,7 +10,7 @@ EndOfMessage
 )
 
 
-if [ $# -lt 2 ];then
+if [ $# -lt 1 ];then
     echo "Insufficient arguments:"
     echo "${HELP}"
     exit 1
