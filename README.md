@@ -11,3 +11,4 @@ A collection of shell scripts to do video and image manipualtion using [ffmpeg](
 * [replace_audio.sh](replace_audio.sh) - Replace the audio track of a video
 * [speedup.sh](speedup.sh) - Increase the speed of the video by 10%
 * [vertical_to_horizontal_blurred.sh](vertical_to_horizontal_blurred.sh) - Convert a video to 16:9 by adding a blurred frame around it
+* [smooth.sh](smooth.sh) - Smooth out a laggy video to 30fps
