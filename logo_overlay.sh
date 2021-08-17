@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 SCRIPT_PATH="$( cd "$(dirname "$0")/../"; pwd -P )"
 
@@ -19,7 +19,7 @@ fi
 
 INPUT_FILE=$1
 LOGO_FILE=$2
-INPUT_EXTENSIONLESS=${INPUT_FILE%.*$}
+INPUT_EXTENSIONLESS=${INPUT_FILE%.*}
 EXTENSION="${INPUT_FILE##*.}"
 
 ffmpeg -i ${INPUT_FILE} -i ${LOGO_FILE} \

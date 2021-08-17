@@ -17,7 +17,7 @@ if [ $# -lt 1 ];then
 fi
 
 INPUT_FILE=$1
-INPUT_EXTENSIONLESS=${INPUT_FILE%.*$}
+INPUT_EXTENSIONLESS=${INPUT_FILE%.*}
 EXTENSION="${INPUT_FILE##*.}"
 
 ffmpeg -i ${INPUT_FILE} -filter:v "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=30'" ${INPUT_EXTENSIONLESS}_smooth.${EXTENSION}

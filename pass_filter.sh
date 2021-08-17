@@ -6,7 +6,7 @@ HELP=$(
     cat <<EndOfMessage
 This script applies a bandpass-filter to the audio stream
 
-Usage: $0 <inputfile> 
+Usage: $0 <inputfile>
 EndOfMessage
 )
 
@@ -18,7 +18,7 @@ if [ $# -lt 1 ];then
 fi
 
 INPUT_FILE=$1
-INPUT_EXTENSIONLESS=${INPUT_FILE%.*$}
+INPUT_EXTENSIONLESS=${INPUT_FILE%.*}
 EXTENSION="${INPUT_FILE##*.}"
 
 
