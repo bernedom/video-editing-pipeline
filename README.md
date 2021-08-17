@@ -4,7 +4,7 @@ A collection of shell scripts to do video and image manipualtion using [ffmpeg](
 
 * [bake_subtitles.sh](bake_subtitles.sh) - Bake subtitles into a video file
 * [crop.sh](crop.sh) - crop a video to a width of 500px
-* [cut_to_60_s.sh](cut_to_60_s.sh) - cut a video to 60s
+* [cut.sh](cut.sh) - cut a video to a specific length without reencoding
 * [logo_overlay.sh](logo_overlay.sh) - Overlay a logo on the top left corner of a video
 * [pass_filter.sh](pass_filter.sh) - A bandpass filter to reduce the noise on the audio track
 * [reduce_to_60fps.sh](reduce_to_60fps.sh) - Set the video to 60fps
