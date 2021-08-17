@@ -6,19 +6,22 @@ HELP=$(
     cat <<EndOfMessage
 This script cuts a video at 60s
 
-Usage: $0 <inputfile> 
+Usage: $0 <inputfile> <start_in_seconds> <duration_in_seconds>
 EndOfMessage
 )
 
 
-if [ $# -lt 1 ];then
+if [ $# -lt 3 ];then
     echo "Insufficient arguments:"
     echo "${HELP}"
     exit 1
 fi
 
+set -x
 INPUT_FILE=$1
-INPUT_EXTENSIONLESS=${INPUT_FILE%.*$}
+START=$2
+duration=$3
+INPUT_EXTENSIONLESS=${INPUT_FILE%.*}
 EXTENSION="${INPUT_FILE##*.}"
 
-ffmpeg -ss 00:00:0.0 -i ${INPUT_FILE} -c copy -t 00:00:59.95 ${INPUT_EXTENSIONLESS}_cut.${EXTENSION}
+ffmpeg -ss ${START} -i ${INPUT_FILE} -c copy -t ${duration} ${INPUT_EXTENSIONLESS}_cut.${EXTENSION}
